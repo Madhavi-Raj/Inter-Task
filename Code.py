@@ -14,6 +14,9 @@ columns=sh[1]
 cn=list(df.columns)
 ans=[]
 for i in range(rows):
+    rows=list(df.iloc[i])
+    if('-' in rows):
+        continue
     name=df.iloc[i][0]
     username=df.iloc[i][1]
     chaptertag=df.iloc[i][2]
